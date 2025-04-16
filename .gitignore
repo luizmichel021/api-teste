@@ -1,0 +1,46 @@
+# Diretórios de ambiente virtual
+venv/
+.env/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Arquivos de configuração sensíveis
+.env
+.env.*
+settings.toml
+settings*.toml
+.secrets.*
+*.secret
+*.key
+
+# Arquivos de log e cache
+*.log
+*.sqlite3
+instance/
+.cache/
+*.db
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+
+# pyinstaller
+dist/
+build/
+*.spec
+
+# Arquivos do Dynaconf
+.settings.py
+*.local.toml
+
+# arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# pytest, coverage
+htmlcov/
+.tox/
+.coverage
+.pytest_cache/
