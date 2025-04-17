@@ -5,6 +5,7 @@ from connection.database import db
 from sqlalchemy.exc import SQLAlchemyError
 from enums.category import Category
 from sqlalchemy import func
+import logging
 
 class Repository:
 
@@ -14,12 +15,9 @@ class Repository:
 
             db.session.add(new_question)
             db.session.commit()
+            logging.info(new_question.id)
 
-            return {
-                "status": "success",
-                "message": "[Repository] - Pergunta cadastrada.",
-                "id": new_question.id
-            }
+            return int(new_question.id)
         except SQLAlchemyError as e:
             db.session.rollback()
             return {"status": "error" , "message": str(e)}
@@ -54,7 +52,7 @@ class Repository:
             db.session.rollback()
             return {"status": "error", "message": str(e)} 
 
-    def get_random_questions_and_answers(category: Category, limit: int = 5):
+    def get_random_questions_and_answers(category: Category, limit: int = 3):
         try:
             questions = Question.query.filter_by(category=category.value).order_by(func.random()).limit(limit).all()
             result = []
@@ -65,10 +63,11 @@ class Repository:
                 }
 
                 result.append({
+                    "Id" : question.id,
                     "Question" : question.text,
-                    "Alternatives": alternatives_format
+                    "Alternatives": alternatives_format                   
                 })
-            return {"status" : "success", "dados" : result} 
+            return result
         except SQLAlchemyError as e:
             return {"status": "error", "message": str(e)}     
 
