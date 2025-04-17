@@ -1,4 +1,4 @@
-from connection import db
+from connection.database import db
 
 class AnswerKey(db.Model):
     __tablename__ = "answers_key"

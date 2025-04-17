@@ -44,3 +44,5 @@ htmlcov/
 .tox/
 .coverage
 .pytest_cache/
+
+test-manual.py
