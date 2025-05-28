@@ -1,16 +1,19 @@
-API de Questionário
-Este projeto é um protótipo de uma API de questionário, desenvolvido como parte de um projeto social na comunidade da Rocinha, no Rio de Janeiro. A API foi criada com o objetivo de facilitar a criação, gerenciamento e resposta a questionários, auxiliando iniciativas sociais na coleta de informações de forma estruturada.
+📝 API de Questionário
+
+Protótipo de API para gerenciamento de questionários, desenvolvido para um projeto social na comunidade da Rocinha - RJ.
+
+
+
+
 
 🚀 Tecnologias Utilizadas
-Python: Linguagem de programação principal utilizada no desenvolvimento da API.
+Python → Linguagem principal utilizada no desenvolvimento.
 
-FastAPI: Framework web moderno e de alto desempenho para a construção da API.
+FastAPI → Framework web moderno e de alto desempenho.
 
-Uvicorn: Servidor ASGI leve e rápido para rodar a aplicação FastAPI.
+Uvicorn → Servidor ASGI leve e rápido para rodar a aplicação.
 
 📂 Estrutura do Projeto
-O projeto está organizado da seguinte forma:
-
 bash
 Copiar
 Editar
@@ -32,14 +35,14 @@ Copiar
 Editar
 git clone https://github.com/luizmichel021/api-teste.git
 cd api-teste
-Crie um ambiente virtual (opcional, mas recomendado):
+(Opcional) Crie um ambiente virtual:
 
 bash
 Copiar
 Editar
 python -m venv venv
-source venv/bin/activate  # No Linux/Mac
-venv\Scripts\activate     # No Windows
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
 Instale as dependências:
 
 bash
@@ -54,21 +57,22 @@ Editar
 uvicorn app:app --reload
 Acesse a documentação interativa:
 
-Swagger UI: http://127.0.0.1:8000/docs
+Swagger UI
 
-Redoc: http://127.0.0.1:8000/redoc
+Redoc
 
-📝 Funcionalidades
-Criação de questionários: Permite a criação de novos questionários com perguntas e opções de resposta.
+✅ Funcionalidades
+Criação de questionários → Permite criar novos questionários com perguntas e opções de resposta.
 
-Gerenciamento de questionários: Edição e exclusão de questionários existentes.
+Gerenciamento → Edição e exclusão de questionários existentes.
 
-Respostas aos questionários: Submissão de respostas pelos usuários.
+Respostas → Submissão de respostas pelos usuários.
 
-Visualização de resultados: Acesso às respostas coletadas para análise.
+Visualização de resultados → Acesso às respostas coletadas para análise.
 
 🤝 Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com sugestões de melhorias ou correções.
+Contribuições são muito bem-vindas!
+Sinta-se à vontade para abrir issues ou pull requests com sugestões de melhorias ou correções.
 
-📄 Licença
-Este projeto está licenciado sob a licença MIT.
+🎯 Sobre o projeto
+Este projeto foi desenvolvido como parte das atividades de extensão universitária do curso de Engenharia de Software, com foco em aplicação prática para apoiar projetos sociais.
